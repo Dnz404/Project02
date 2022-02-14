@@ -117,3 +117,23 @@ footer a:hover{
         padding-left: 50px;
     }
 }
+@media (max-width:950px){
+    footer .fcontent .caixa{
+        width: 50%;
+    }
+}
+.fcontent .direita{
+    margin-top: 40px;
+}
+@media (max-width: 560px){
+    footer{
+        position: relative;
+    }
+    footer .fcontent .caixa{
+        width: 100%;
+        margin-top: 30px;
+    }
+    footer .fcontent .meio{
+        padding-left: 0;
+    }
+}
