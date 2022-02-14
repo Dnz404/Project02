@@ -113,7 +113,7 @@
     display: none;
   }
   
-  /* Dropdown Menu code start */
+  /* Dropdown Menu code  */
   .conteudo .links ul{
     position: absolute;
     background: #030405;
@@ -146,7 +146,7 @@
     top: 0;
   }
   
-  /* Responsive code start */
+  /* Responsive code  */
   @media screen and (max-width: 1250px){
     .face nav{
       max-width: 100%;
@@ -205,7 +205,7 @@
       display: none;
     }
   
-    /* dropdown responsive code start */
+    /* dropdown responsive code  */
     .conteudo .links ul,
     .conteudo .links ul ul{
       position: static;
