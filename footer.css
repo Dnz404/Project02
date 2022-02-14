@@ -65,5 +65,16 @@ footer .fcontent .direita input[type="text"]{
 
 }
 footer .fcontent .direita input[type="submit"]{
-    
+    height: 45px;
+    width: 100%;
+    font-size: 20px;
+    color: #d4c7c7;
+    background: #5716be;
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 12px;
+    border: 2px solid #5716be;
+    transition: all 0.4s ease-in-out;
 }
