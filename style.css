@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  .face{
+    background: #080a0c;
+    position: fixed;
+    width: 100%;
+  }
+  .face nav{
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .conteudo{
+    display: flex;
+    align-items: center;
+  }
+  nav .conteudo .links{
+    margin-left: 80px;
+    display: flex;
+  }
+  .conteudo .logo a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .conteudo .links li{
+    list-style: none;
+    line-height: 70px;
+  }
+  .conteudo .links li a,
+  .conteudo .links li label{
+    color: rgba(235, 213, 213, 0.897);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .conteudo .links li label{
+    display: none;
+  }
+  .conteudo .links li a:hover,
+  .conteudo .links li label:hover{
+    background: #22262e;
+  }
+  .face .icone-busca,
+  .face .icone-menu{
+    color: rgb(238, 221, 221);
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+  }
+  .face .icone-menu{
+    display: none;
+  }
+  .face #show-search:checked ~ .icone-menu i::before{
+    content: "\f00d";
+  }
+  
+  .face .caixa-busca{
+    position: absolute;
+    height: 100%;
+    max-width: calc(100% - 50px);
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .face #show-search:checked ~ .caixa-busca{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .caixa-busca input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: rgb(223, 195, 195);
+    background: #171c24;
+    padding: 0 100px 0 15px;
+  }
+  .caixa-busca input::placeholder{
+    color: #e7cdcd;
+  }
+  .caixa-busca .go-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 60px;
+    width: 70px;
+    background: #13161b;
+    border: none;
+    outline: none;
+    color: rgb(228, 205, 205);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .face input[type="checkbox"]{
+    display: none;
+  }
+  
+  /* Dropdown Menu code start */
+  .conteudo .links ul{
+    position: absolute;
+    background: #030405;
+    top: 80px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .conteudo .links li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+  }
+  .conteudo .links ul li a{
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    border-radius: 0px!important;
+  }
+  .conteudo .links ul ul{
+    position: absolute;
+    top: 0;
+    right: calc(-100% + 8px);
+  }
+  .conteudo .links ul li{
+    position: relative;
+  }
+  .conteudo .links ul li:hover ul{
+    top: 0;
+  }
+  
+  /* Responsive code start */
+  @media screen and (max-width: 1250px){
+    .face nav{
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    nav .conteudo .links{
+      margin-left: 30px;
+    }
+    .conteudo .links li a{
+      padding: 8px 13px;
+    }
+    .face .caixa-busca{
+      max-width: calc(100% - 100px);
+    }
+    .face .caixa-busca input{
+      padding: 0 100px 0 15px;
+    }
+  }
+  
+  @media screen and (max-width: 900px){
+    .face .icone-menu{
+      display: block;
+    }
+    .face #show-menu:checked ~ .icone-menu i::before{
+      content: "\f00d";
+    }
+    nav .conteudo .links{
+      display: block;
+      position: fixed;
+      background: #14181f;
+      height: 100%;
+      width: 100%;
+      top: 70px;
+      left: -100%;
+      margin-left: 0;
+      max-width: 350px;
+      overflow-y: auto;
+      padding-bottom: 100px;
+      transition: all 0.3s ease;
+    }
+    nav #show-menu:checked ~ .conteudo .links{
+      left: 0%;
+    }
+    .conteudo .links li{
+      margin: 15px 20px;
+    }
+    .conteudo .links li a,
+    .conteudo .links li label{
+      line-height: 40px;
+      font-size: 20px;
+      display: block;
+      padding: 8px 18px;
+      cursor: pointer;
+    }
+    .conteudo .links li a.desktop-link{
+      display: none;
+    }
+  
+    /* dropdown responsive code start */
+    .conteudo .links ul,
+    .conteudo .links ul ul{
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background: none;
+      max-height: 0px;
+      overflow: hidden;
+    }
+    .conteudo .links #show-features:checked ~ ul,
+    .conteudo .links #show-services:checked ~ ul,
+    .conteudo .links #show-items:checked ~ ul{
+      max-height: 100vh;
+    }
+    .conteudo .links ul li{
+      margin: 7px 20px;
+    }
+    .conteudo .links ul li a{
+      font-size: 18px;
+      line-height: 30px;
+      border-radius: 5px!important;
+    }
+  }
+  
+  @media screen and (max-width: 400px){
+    .face nav{
+      padding: 0 10px;
+    }
+    .conteudo .logo a{
+      font-size: 27px;
+    }
+    .face .caixa-busca{
+      max-width: calc(100% - 70px);
+    }
+    .face .caixa-busca .go-icon{
+      width: 30px;
+      right: 0;
+    }
+    .face .caixa-busca input{
+      padding-right: 30px;
+    }
+  }
+  
+  .fake-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    z-index: -1;
+    padding: 0 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  .fake-text h2{
+    font-size: 45px;
+    margin: 5px 0;
+  }

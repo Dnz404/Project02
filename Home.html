@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=firefox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu/navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="face">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="icone-menu"><i class="fas fa-bars"></i></label>
+      <div class="conteudo">
+      <div class="logo"><a href="#">Working</a></div>
+        <ul class="links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li>
+            <a href="#" class="desktop-link">Recursos</a>
+            <input type="checkbox" id="show-recursos">
+            <label for="show-recursos">Recursos</label>
+            <ul>
+              <li><a href="#">Recurso 1</a></li>
+              <li><a href="#">Recurso 2</a></li>
+              <li><a href="#">Recurso 3</a></li>
+              <li><a href="#">Recurso 4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="desktop-link">Serviços</a>
+            <input type="checkbox" id="show-serviço">
+            <label for="show-serviço">Services</label>
+            <ul>
+              <li><a href="#">Serviço</a></li>
+              <li><a href="#">Serviço 2</a></li>
+              <li><a href="#">Serviço 3</a></li>
+              <li>
+                <a href="#" class="desktop-link">Mais Serviços</a>
+                <input type="checkbox" id="show-items">
+                <label for="show-items">Mais Serviços</label>
+                <ul>
+                  <li><a href="#">Serviço 1</a></li>
+                  <li><a href="#">Serviço 2</a></li>
+                  <li><a href="#">Serviço 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+      <label for="show-search" class="icone-busca"><i class="fas fa-search"></i></label>
+      <form action="#" class="caixa-busca">
+        <input type="text" placeholder="Digite algo para buscar..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+  <div class="fake-text">
+    <h2>Menu com barra de busca</h2>
+    <h2>Usando HTML e CSS - Flexbox</h2>
+  </div>
+</body>
+</html>
