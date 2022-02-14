@@ -24,3 +24,16 @@ footer .fcontent{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+footer .fcontent p,a{
+    color: rgb(177, 153, 153);
+}
+footer .fcontet .caixa{
+    width: 35%;
+    transition: all 0.4s ease;
+}
+footer .fcontent .topico{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(177, 153, 153) ;
+    margin-bottom: 18px;
+}
